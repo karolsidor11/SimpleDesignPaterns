@@ -26,7 +26,7 @@ class UserTest {
         String adress = "Garbów";
 
         // when:
-        user = new User.UserBuilder()
+        user = new User.Builder()
                 .id(id)
                 .name(name)
                 .lastName(lastName)

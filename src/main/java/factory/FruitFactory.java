@@ -3,18 +3,18 @@ package factory;
 public class FruitFactory {
 
     public Fruit produce(String fruit) {
-        Fruit fruit1 = null;
+        Fruit actualFruit;
 
         if (fruit.equals("Apple")) {
-            fruit1 = new Apple();
+            actualFruit = new Apple();
         } else if (fruit.equals("Banana")) {
-            fruit1 = new Banana();
+            actualFruit = new Banana();
 
         } else if (fruit.equals("Orange")) {
-            fruit1 = new Orange();
+            actualFruit = new Orange();
         } else {
-            fruit1 = new Fruit();
+            actualFruit = new Fruit();
         }
-        return fruit1;
+        return actualFruit;
     }
 }

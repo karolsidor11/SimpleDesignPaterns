@@ -8,7 +8,7 @@ public class User {
     private int age;
     private String adress;
 
-    public User(UserBuilder userBuilder) {
+    User(Builder userBuilder) {
         this.id = userBuilder.id;
         this.name = userBuilder.name;
         this.lastName = userBuilder.lastName;
@@ -56,7 +56,7 @@ public class User {
         this.adress = adress;
     }
 
-    public static class UserBuilder {
+    public static class Builder {
 
         private int id;
         private String name;
@@ -64,27 +64,27 @@ public class User {
         private int age;
         private String adress;
 
-        public UserBuilder id(int id) {
+        public  Builder id(int id) {
             this.id = id;
             return this;
         }
 
-        public UserBuilder name(String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
 
-        public UserBuilder lastName(String lastName) {
+        public Builder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public UserBuilder age(int age) {
+        public Builder age(int age) {
             this.age = age;
             return this;
         }
 
-        public UserBuilder adress(String adress) {
+        public Builder adress(String adress) {
             this.adress = adress;
             return this;
         }
@@ -92,5 +92,6 @@ public class User {
         public User build() {
             return new User(this);
         }
+
     }
 }
