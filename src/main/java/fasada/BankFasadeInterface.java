@@ -2,9 +2,9 @@ package fasada;
 
 public interface BankFasadeInterface {
 
-    boolean identyfikacja(Long nrKartyBankowej, int PIN);
+    boolean identification(Long bankCardNumber, int PIN);
 
-    float sprawdzStanKonta(Long nrKartyBankowej);
+    float checkAccountBalance(Long bankCardNumber);
 
-    String wyplacGotowke(int kwota);
+    String withdrawCash(int amount);
 }

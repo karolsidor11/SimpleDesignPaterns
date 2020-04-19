@@ -16,11 +16,8 @@ class SimpleSingletonTest {
 
     @Test
     void getInstance() {
-        // given:
-        String name = "Karol";
-
         //when:
-        simpleSingleton.singletonName = name;
+        simpleSingleton.singletonName = "Karol";
 
         //  then:
         assertEquals("Karol", simpleSingleton.singletonName);

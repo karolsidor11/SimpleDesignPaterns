@@ -4,5 +4,5 @@ import java.math.BigDecimal;
 
 public interface Vat {
 
-    BigDecimal obliczaVat(BigDecimal cena);
+    BigDecimal calculateVat(BigDecimal price);
 }

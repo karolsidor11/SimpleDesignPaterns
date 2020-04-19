@@ -1,5 +1,7 @@
 package factory;
 
+import java.util.Objects;
+
 public class Fruit {
 
     private String name;
@@ -54,9 +56,9 @@ public class Fruit {
         Fruit fruit = (Fruit) o;
 
         if (Double.compare(fruit.weight, weight) != 0) return false;
-        if (name != null ? !name.equals(fruit.name) : fruit.name != null) return false;
-        if (type != null ? !type.equals(fruit.type) : fruit.type != null) return false;
-        return grade != null ? grade.equals(fruit.grade) : fruit.grade == null;
+        if (!Objects.equals(name, fruit.name)) return false;
+        if (!Objects.equals(type, fruit.type)) return false;
+        return Objects.equals(grade, fruit.grade);
     }
 
     @Override

@@ -11,17 +11,17 @@ public class BankFasade implements BankFasadeInterface {
     }
 
     @Override
-    public boolean identyfikacja(Long nrKartyBankowej, int PIN) {
-        return bankLogin.identyfikacja(nrKartyBankowej, PIN);
+    public boolean identification(Long bankCardNumber, int PIN) {
+        return bankLogin.identification(bankCardNumber, PIN);
     }
 
     @Override
-    public float sprawdzStanKonta(Long nrKartyBankowej) {
-        return bankSystem.sprawdzStanKonta(nrKartyBankowej);
+    public float checkAccountBalance(Long bankCardNumber) {
+        return bankSystem.checkAccountBalance(bankCardNumber);
     }
 
     @Override
-    public String wyplacGotowke(int kwota) {
-        return bankSystem.wyplacGotowke(kwota);
+    public String withdrawCash(int amount) {
+        return bankSystem.withdrawCash(amount);
     }
 }

@@ -22,7 +22,7 @@ public class Bankomat {
         System.out.println("Wprowadź PIN:");
         int PIN = scanner.nextInt();
 
-        boolean identyfikacja = bankFasade.identyfikacja(123456789L, PIN);
+        boolean identyfikacja = bankFasade.identification(123456789L, PIN);
         if (identyfikacja) {
             pokazMenu();
         } else {

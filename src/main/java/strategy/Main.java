@@ -9,13 +9,13 @@ public class Main {
         Vat vat7 = new Vat7();
         Vat vat32 = new Vat32();
 
-        CD płytaCD = new CD(BigDecimal.valueOf(20));
+        CD cd = new CD(BigDecimal.valueOf(20));
 
-        BigDecimal cenaPłytyZVat7 = płytaCD.pobierzCenę(vat7);
-        BigDecimal cenaPłytyZVat32 = płytaCD.pobierzCenę(vat32);
+        BigDecimal cdWith7Vat = cd.getPrice(vat7);
+        BigDecimal cdWith32Vat = cd.getPrice(vat32);
 
-        System.out.println("Cena płyty z Vat7 : "+cenaPłytyZVat7);
-        System.out.println("Cena płyty z Vat32 : "+cenaPłytyZVat32);
+        System.out.println("Cena płyty z Vat7 : " + cdWith7Vat);
+        System.out.println("Cena płyty z Vat32 : " + cdWith32Vat);
 
     }
 }

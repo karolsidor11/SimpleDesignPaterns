@@ -16,7 +16,6 @@ class FruitFactoryTest {
 
     @Test
     public void shouldCreateApple() {
-
         // given:
         String fruit = "Apple";
 
@@ -24,7 +23,7 @@ class FruitFactoryTest {
         Fruit produce = fruitFactory.produce(fruit);
 
         //  then:
-        assertEquals("Apple", produce.getFruitName());
+        assertEquals("APPLE", produce.getFruitName());
         assertEquals("factory.Apple", produce.getClass().getName());
     }
 
@@ -37,7 +36,7 @@ class FruitFactoryTest {
         Fruit produce = fruitFactory.produce(fruit);
 
         //  then:
-        assertEquals("Banana", produce.getFruitName());
+        assertEquals("BANANA", produce.getFruitName());
         assertEquals("factory.Banana", produce.getClass().getName());
     }
 
@@ -50,7 +49,7 @@ class FruitFactoryTest {
         Fruit produce = fruitFactory.produce(fruit);
 
         //  then:
-        assertEquals("Orange", produce.getFruitName());
+        assertEquals("ORANGE", produce.getFruitName());
         assertEquals("factory.Orange", produce.getClass().getName());
     }
 
@@ -66,5 +65,4 @@ class FruitFactoryTest {
         assertEquals("No name", produce.getFruitName());
         assertEquals("factory.Fruit", produce.getClass().getName());
     }
-
 }

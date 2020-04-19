@@ -4,13 +4,13 @@ import java.math.BigDecimal;
 
 public class CD {
 
-    private BigDecimal cena;
+    private BigDecimal price;
 
-    public CD(BigDecimal cena) {
-        this.cena = cena;
+    public CD(BigDecimal price) {
+        this.price = price;
     }
 
-    public BigDecimal pobierzCenę(Vat vat) {
-        return cena.add(vat.obliczaVat(cena ));
+    public BigDecimal getPrice(Vat vat) {
+        return price.add(vat.calculateVat(price));
     }
 }

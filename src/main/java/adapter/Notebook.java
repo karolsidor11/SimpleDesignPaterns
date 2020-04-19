@@ -1,32 +1,12 @@
 package adapter;
 
-import java.util.ArrayList;
-import java.util.List;
+public interface Notebook {
 
-public class Notebook implements I_Notebook {
+    void createNote(String title, String content);
 
-    List<Node> nodeList = new ArrayList<>();
+    String getNote(String title);
 
-    @Override
-    public void stwórzNotatke(String tytuł, String treść) {
-        nodeList.add(new Node(tytuł, treść, null));
-    }
+    String deleteNote(String title);
 
-    @Override
-    public String getNote(String tytuł) {
-        return nodeList.stream()
-                .filter(node -> node.getTytuł().equals(tytuł))
-                .findFirst().toString();
-    }
-
-    @Override
-    public String usuńNotatke(String tytuł) {
-        nodeList.removeIf(node -> node.getTytuł().equals(tytuł));
-        return "Usunięto  notatkę  o tytule :"+tytuł;
-    }
-
-    @Override
-    public String notesCatalog() {
-        return nodeList.toString();
-    }
+    String notesCatalog();
 }

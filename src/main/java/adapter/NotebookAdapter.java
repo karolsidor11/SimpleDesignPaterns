@@ -1,28 +1,28 @@
 package adapter;
 
-public class NotebookAdapter implements I_Notebook, I_Notebook_v2 {
+public class NotebookAdapter implements Notebook, Notebook2 {
 
-    private Notebook_v2 notebook = new Notebook_v2();
+    private NotebookImpl2 notebook = new NotebookImpl2();
 
     @Override
-    public void stwórzNotatke(String tytuł, String treść) {
+    public void createNote(String title, String content) {
 
-        notebook.stwórzNotatke(tytuł, treść, null);
+        notebook.createNote(title, content, null);
     }
 
     @Override
-    public void stwórzNotatke(String tytuł, String treść, String odbiorca) {
-        notebook.stwórzNotatke(tytuł, treść, odbiorca);
+    public void createNote(String title, String content, String odbiorca) {
+        notebook.createNote(title, content, odbiorca);
     }
 
     @Override
-    public String getNote(String tytuł) {
-        return notebook.getNote(tytuł);
+    public String getNote(String title) {
+        return notebook.getNote(title);
     }
 
     @Override
-    public String usuńNotatke(String tytuł) {
-        return notebook.usuńNotatke(tytuł);
+    public String deleteNote(String title) {
+        return notebook.deleteNote(title);
     }
 
     @Override

@@ -1,40 +1,41 @@
 package adapter;
 
+import java.util.Objects;
+
 public class Node {
 
-    private String tytuł;
-    private String treść;
+    private String title;
+    private String content;
+    private String recipient;
 
-    public Node(String tytuł, String treść, String odbiorca) {
-        this.tytuł = tytuł;
-        this.treść = treść;
-        this.odbiorca = odbiorca;
+    public Node(String title, String content, String recipient) {
+        this.title = title;
+        this.content = content;
+        this.recipient = recipient;
     }
 
-    private String odbiorca;
-
-    public String getTytuł() {
-        return tytuł;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTytuł(String tytuł) {
-        this.tytuł = tytuł;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getTreść() {
-        return treść;
+    public String getContent() {
+        return content;
     }
 
-    public void setTreść(String treść) {
-        this.treść = treść;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getOdbiorca() {
-        return odbiorca;
+    public String getRecipient() {
+        return recipient;
     }
 
-    public void setOdbiorca(String odbiorca) {
-        this.odbiorca = odbiorca;
+    public void setRecipient(String recipient) {
+        this.recipient = recipient;
     }
 
     @Override
@@ -44,25 +45,21 @@ public class Node {
 
         Node node = (Node) o;
 
-        if (tytuł != null ? !tytuł.equals(node.tytuł) : node.tytuł != null) return false;
-        if (treść != null ? !treść.equals(node.treść) : node.treść != null) return false;
-        return odbiorca != null ? odbiorca.equals(node.odbiorca) : node.odbiorca == null;
+        if (!Objects.equals(title, node.title)) return false;
+        if (!Objects.equals(content, node.content)) return false;
+        return Objects.equals(recipient, node.recipient);
     }
 
     @Override
     public int hashCode() {
-        int result = tytuł != null ? tytuł.hashCode() : 0;
-        result = 31 * result + (treść != null ? treść.hashCode() : 0);
-        result = 31 * result + (odbiorca != null ? odbiorca.hashCode() : 0);
+        int result = title != null ? title.hashCode() : 0;
+        result = 31 * result + (content != null ? content.hashCode() : 0);
+        result = 31 * result + (recipient != null ? recipient.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
-        return "Node{" +
-                "tytuł='" + tytuł + '\'' +
-                ", treść='" + treść + '\'' +
-                ", odbiorca='" + odbiorca + '\'' +
-                '}';
+        return "Node{" + "tytuł='" + title + '\'' + ", treść='" + content + '\'' + ", odbiorca='" + recipient + '\'' + '}';
     }
 }
