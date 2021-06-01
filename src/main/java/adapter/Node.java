@@ -60,6 +60,10 @@ public class Node {
 
     @Override
     public String toString() {
-        return "Node{" + "tytuł='" + title + '\'' + ", treść='" + content + '\'' + ", odbiorca='" + recipient + '\'' + '}';
+        return "Node{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", recipient='" + recipient + '\'' +
+                '}';
     }
 }

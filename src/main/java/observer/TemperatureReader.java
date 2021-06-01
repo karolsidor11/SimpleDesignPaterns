@@ -1,4 +1,4 @@
-package obserwator;
+package observer;
 
 public class TemperatureReader {
 
@@ -9,6 +9,6 @@ public class TemperatureReader {
     }
 
     public void update(int temperature) {
-        System.out.println("Czytnik o numerze : " + nextNumber + " wskazuje temperature " + temperature);
+        System.out.println("Reader with the number : " + nextNumber + " indicates temperature " + temperature);
     }
 }

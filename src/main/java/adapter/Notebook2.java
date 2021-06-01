@@ -2,7 +2,7 @@ package adapter;
 
 public interface Notebook2 {
 
-    void createNote(String title, String content, String  recipient);
+    void createNote(String title, String content, String recipient);
 
     String getNote(String title);
 

@@ -1,4 +1,4 @@
-package obserwator;
+package observer;
 
 public interface WeatherStation {
 

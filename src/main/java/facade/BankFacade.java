@@ -1,11 +1,11 @@
-package fasada;
+package facade;
 
-public class BankFasade implements BankFasadeInterface {
+public class BankFacade implements BankFacadeInterface {
 
     private BankSystem bankSystem;
     private BankLogin bankLogin;
 
-    public BankFasade() {
+    public BankFacade() {
         bankLogin = new BankLogin();
         bankSystem = new BankSystem();
     }

@@ -1,6 +1,6 @@
-package fasada;
+package facade;
 
-public interface BankFasadeInterface {
+public interface BankFacadeInterface {
 
     boolean identification(Long bankCardNumber, int PIN);
 

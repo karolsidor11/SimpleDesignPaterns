@@ -2,7 +2,7 @@ package strategy;
 
 import java.math.BigDecimal;
 
-public class Main {
+public class CDShop {
 
     public static void main(String[] args) {
 
@@ -14,8 +14,7 @@ public class Main {
         BigDecimal cdWith7Vat = cd.getPrice(vat7);
         BigDecimal cdWith32Vat = cd.getPrice(vat32);
 
-        System.out.println("Cena płyty z Vat7 : " + cdWith7Vat);
-        System.out.println("Cena płyty z Vat32 : " + cdWith32Vat);
-
+        System.out.println("Price CD with Vat7 : " + cdWith7Vat);
+        System.out.println("Price CD with Vat32 : " + cdWith32Vat);
     }
 }

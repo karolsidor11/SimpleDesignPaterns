@@ -6,14 +6,14 @@ public class User {
     private String name;
     private String lastName;
     private int age;
-    private String adress;
+    private String address;
 
     User(Builder userBuilder) {
         this.id = userBuilder.id;
         this.name = userBuilder.name;
         this.lastName = userBuilder.lastName;
         this.age = userBuilder.age;
-        this.adress = userBuilder.adress;
+        this.address = userBuilder.address;
     }
 
     public int getId() {
@@ -48,12 +48,12 @@ public class User {
         this.age = age;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public static class Builder {
@@ -62,9 +62,9 @@ public class User {
         private String name;
         private String lastName;
         private int age;
-        private String adress;
+        private String address;
 
-        public  Builder id(int id) {
+        public Builder id(int id) {
             this.id = id;
             return this;
         }
@@ -84,14 +84,13 @@ public class User {
             return this;
         }
 
-        public Builder adress(String adress) {
-            this.adress = adress;
+        public Builder address(String address) {
+            this.address = address;
             return this;
         }
 
         public User build() {
             return new User(this);
         }
-
     }
 }

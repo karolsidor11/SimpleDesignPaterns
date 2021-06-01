@@ -14,13 +14,17 @@ public class NotebookImpl implements Notebook {
 
     @Override
     public String getNote(String title) {
-        return nodeList.stream().filter(node -> node.getTitle().equals(title)).findFirst().toString();
+        return nodeList.stream()
+                .filter(node -> node.getTitle().equals(title))
+                .findFirst()
+                .map(Node::toString)
+                .orElse("Default note");
     }
 
     @Override
     public String deleteNote(String title) {
-        nodeList.removeIf(node -> node.getTitle().equals(title));
-        return "Usunięto  notatkę  o tytule :" + title;
+        boolean result = nodeList.removeIf(node -> node.getTitle().equals(title));
+        return result ? "Note deleted : " + title : "Note not deleted";
     }
 
     @Override

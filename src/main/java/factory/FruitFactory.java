@@ -1,16 +1,17 @@
 package factory;
 
+import static factory.Fruits.*;
+
 public class FruitFactory {
 
     public Fruit produce(String fruit) {
         Fruit actualFruit;
 
-        if (fruit.equals("Apple")) {
+        if (APPLE.name().equalsIgnoreCase(fruit)) {
             actualFruit = new Apple();
-        } else if (fruit.equals("Banana")) {
+        } else if (BANANA.name().equalsIgnoreCase(fruit)) {
             actualFruit = new Banana();
-
-        } else if (fruit.equals("Orange")) {
+        } else if (ORANGE.name().equalsIgnoreCase(fruit)) {
             actualFruit = new Orange();
         } else {
             actualFruit = new Fruit();

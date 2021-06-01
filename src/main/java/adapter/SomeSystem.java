@@ -3,16 +3,14 @@ package adapter;
 public class SomeSystem {
 
     public static void main(String[] args) {
-        NotebookAdapter notebook =new NotebookAdapter();
+        NotebookAdapter notebook = new NotebookAdapter();
 
-        notebook.createNote("Tytuł 1", "Pierwsza notatka");
-        notebook.createNote("Tytuł 2", "Druga notatka");
-        notebook.createNote("Tytuł 3", "Trzecia notatka");
+        notebook.createNote("Title 1", "First note");
+        notebook.createNote("Title 2", "Second note");
+        notebook.createNote("Title 3", "Third note");
 
         notebook.notesCatalog();
-
-        notebook.getNote("a");
-
-        notebook.deleteNote("Tytuł 3");
+        notebook.getNote("First note");
+        notebook.deleteNote("Title 3");
     }
 }
